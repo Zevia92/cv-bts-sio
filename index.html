@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Alternance BTS SIO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= A4 PRINT ================= */
+@page {
+    size: A4 portrait;
+    margin: 20mm;
+}
+
+/* ================= BASE ================= */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #e5e9f0;
+    color: #1e293b;
+}
+
+/* ================= CONTAINER ================= */
+.cv-container {
+    width: 210mm;
+    margin: auto;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= HEADER (COMPACT) ================= */
+.header {
+    grid-column: 1 / -1;
+    position: relative;
+    padding: 32px 40px;
+    background-image: url("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay */
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.5)
+    );
+}
+
+/* Glass card compacte */
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: auto;
+    padding: 18px 22px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Nom */
+.header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.6);
+}
+
+/* Sous-titre */
+.header .subtitle {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    opacity: 0.95;
+}
+
+/* Badge */
+.header .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 18px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    background: rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    background: #f8fafc;
+    padding: 30px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.sidebar h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+.sidebar p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+.sidebar ul li:not(:has(strong))::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+}
+
+/* ================= MAIN ================= */
+.main {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.section h2 {
+    font-size: 18px;
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+}
+.section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.section ul {
+    list-style: none;
+    padding-left: 0;
+}
+.section ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 22px;
+    position: relative;
+}
+.section ul li:not(:has(strong))::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.skill-chip {
+    background: #e0e7ff;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 18px;
+    font-size: 13px;
+}
+
+/* ================= PLACEHOLDER ================= */
+.placeholder {
+    color: #94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cv-container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <!-- image pour impression -->
+        <img class="print-img" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Header Image" style="display:none;">
+        <div class="header-content">
+            <h1>Enzo CLEMENT</h1>
+            <div class="subtitle">BTS Services Informatiques aux Organisations</div>
+            <div class="badge">
+                À la recherche d’un contrat d’apprentissage • Disponible immédiatement<br>
+                Rythme : 1 semaine en formation / 1 semaine en entreprise
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div>
+            <h2>Profil</h2>
+            <p class="placeholder">
+                Curieux et portant un intérêt pour les technologies numériques, je souhaite découvrir le fonctionnement des systèmes en entreprise, apprendre aux côtés de professionnels et développer mes compétences tout en contribuant à l’équipe.
+            </p>
+        </div>
+        <div>
+            <h2>Informations</h2>
+            <p>📍 Nanterre (92)</p>
+            <p>🎂 22 ans</p>
+            <p>📧 enzo.zinnedine.clement<wbr>@gmail.com</p>
+            <p>📞 07-66-40-77-19</p>
+        </div>
+
+        <div>
+            <h2>Qualités</h2>
+            <ul>
+                <li>Motivé</li>
+                <li>Curieux</li>
+                <li>Esprit d’équipe</li>
+                <li>Flexible</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Centres d’intérêts</h2>
+            <ul>
+                <li>Manga</li>
+                <li>Développement informatique</li>
+                <li>Jeux vidéo</li>
+                <li>Veille technologique</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <div class="section">
+            <h2>Formations</h2>
+            <ul>
+                <li>
+                    <strong>2026 – Institut F2I</strong><br>
+                    BTS Services Informatiques aux Organisations<br>
+                    <em>Rentrée décalée – Février 2026</em>
+                </li>
+
+                <li>
+                    <strong>2022 – 2024 | IIM – Digital School Paris</strong><br>
+                    Cycle préparatoire & Bachelor Digital<br>
+                    <em>Fondamentaux du numérique, projets digitaux et culture web</em>
+                </li>
+
+                <li>
+                    <strong>2021 – 2022 | Université Paris Nanterre</strong><br>
+                    Licence 1 Sciences du langage
+                </li>
+
+                <li>
+                    <strong>2021 | Lycée La Tournelle – La Garenne-Colombes</strong><br>
+                    Baccalauréat Professionnel Gestion Administration
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projets personnels / école</h2>
+            <ul>
+                <li>
+                    <strong>2023 – Site de streaming type Netflix (Projet IIM)</strong><br>
+                    <ul>
+                        <li>Développement d’un site web responsive avec système d’authentification et base de données MySQL.</li>
+                        <li>Présentation des films en grille, intégration HTML5, CSS3, JavaScript, PHP et Bootstrap.</li>
+                        <li>Gestion complète du projet, de la conception à la mise en ligne, démontrant des compétences en <strong>développement web full-stack</strong> et <strong>UI/UX design</strong>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>2025 – Boutique Shopify personnalisée “FeelMySong” (Projet personnel / Auto-entreprise)</strong><br>
+                    <ul>
+                        <li>Re-codage complet du thème “Dawn” avec HTML, CSS, JavaScript et Liquid pour personnaliser l’expérience utilisateur et le design de la boutique.</li>
+                        <li>Recours ponctuel à une IA pour optimiser le code et résoudre certains problèmes techniques.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>2025 – Extension Chrome “ZV ScrappE” (Projet personnel)</strong><br>
+                    <ul>
+                        <li>Développement d’une extension Chrome (Manifest V3) permettant de scraper les éléments HTML, CSS et JavaScript d’une page.</li>
+                        <li>Utilisation de Node.js et bundling via Vite pour la gestion du projet et des dépendances.</li>
+                        <li>Assistance ponctuelle d’une IA pour optimiser le code et résoudre certains problèmes techniques, démontrant autonomie et maîtrise des outils modernes.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Compétences</h2>
+            <div class="skills">
+                <div class="skill-chip">HTML5</div>
+                <div class="skill-chip">CSS3</div>
+                <div class="skill-chip">JavaScript</div>
+                <div class="skill-chip">PHP</div>
+                <div class="skill-chip">Node.js</div>
+                <div class="skill-chip">Bootstrap</div>
+                <div class="skill-chip">Vite</div>
+                <div class="skill-chip">SQL / MySQL</div>
+                <div class="skill-chip">Python</div>
+                <div class="skill-chip">Git</div>
+                <div class="skill-chip">Linux / Windows</div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
